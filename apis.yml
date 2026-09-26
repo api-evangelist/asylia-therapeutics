@@ -1,23 +1,60 @@
 aid: asylia-therapeutics
+
 name: Asylia Therapeutics
-description: 'Asylia Therapeutics is a company surfaced via the API Evangelist harvest backlog (source:
-  secondary-market) and added to the network as a stub for full-pipeline profiling.'
+
+description: 'Asylia Therapeutics is a biotechnology company focused on developing innovative therapeutic solutions. The company aims to address unmet medical needs through advanced research and development of novel drug candidates. While detailed public information is limited, Asylia Therapeutics is positioned within the biotech sector, seeking partnerships and investment to advance its pipeline.'
+
 url: https://raw.githubusercontent.com/api-evangelist/asylia-therapeutics/refs/heads/main/apis.yml
+
 x-type: company
+
 x-source: harvest:secondary-market
-x-tier: stub
-x-tier-reason: harvest
+
+x-tier: profiled
+x-tier-reason: enrichment pass 2026-09-26 (modular-v1; was harvest)
+
 specificationVersion: '0.20'
+
 created: '2026-09-26'
+
 modified: '2026-09-26'
+
 tags:
 - Company
-apis: []
+- Biotechnology
+- Therapeutics
+- Health
+- Innovation
+
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+
 common:
-- type: Website
-  url: https://www.nasdaqprivatemarket.com/
+
+  - type: Hosts
+    url: hosts/asylia-therapeutics-hosts.yml
+  - type: Vendors
+    url: vendors/asylia-therapeutics-vendors.yml
+  - type: DomainSecurity
+    url: security/asylia-therapeutics-domain-security.yml
+  - type: Website
+    url: https://www.nasdaqprivatemarket.com/
+
+apis: []
+x-coverage:
+  state: none
+  reason: no-developer-program
+  detail: Company listing on Nasdaq Private Market provides no developer program or API documentation.
+  evidence:
+  - url: https://www.nasdaqprivatemarket.com
+    status: 200
+  checked: '2026-09-26'
+x-enrichment:
+  date: '2026-09-26'
+  status: minimal
+  artifacts_added: 2
+  pass: modular-v1
+  engine: identity=local,contract=local,surfaces=local,docs=local
